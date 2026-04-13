@@ -1,3 +1,3 @@
 # 🏥 Banque de Sang
-## Projet de gestion de pharmacie avec chatbot LLaMA 3
+## Projet de gestion de banque de sang avec chatbot LLaMA 3
 ### École : ESSAI Tunis
