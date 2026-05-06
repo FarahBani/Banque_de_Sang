@@ -1,0 +1,796 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg-page);
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #fee2e2 0%, #fef2f2 100%);
+  padding: 40px 32px;
+  border-bottom: 2px solid var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.bloodTypeBadge {
+  background: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 0;
+  background: white;
+  border-bottom: 2px solid var(--border);
+  padding: 0 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tab {
+  padding: 16px 24px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  top: 2px;
+}
+
+.tab:hover {
+  color: var(--primary);
+}
+
+.tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 32px;
+}
+
+.tabContent {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 40px 0 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* STATUS ALERT */
+.statusAlert,
+.statusAlertWarning {
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  margin-bottom: 32px;
+  border-left: 4px solid;
+}
+
+.statusAlert {
+  background: #dcfce7;
+  border-left-color: var(--success);
+}
+
+.statusAlert h3 {
+  color: var(--success);
+  margin: 0 0 8px 0;
+}
+
+.statusAlert p {
+  color: #166534;
+  margin: 0;
+  font-size: 14px;
+}
+
+.statusAlertWarning {
+  background: #fef2f2;
+  border-left-color: var(--primary);
+}
+
+.statusAlertWarning h3 {
+  color: var(--primary);
+  margin: 0 0 8px 0;
+}
+
+.statusAlertWarning p {
+  color: #991b1b;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* STATS GRID */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.statIcon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin: 0 0 4px 0;
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+.statDetail {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+}
+
+/* BADGES */
+.badgesSection {
+  background: white;
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.badgesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.badgeCard {
+  background: var(--primary-bg);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.badgeCard:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.badgeIcon {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.badgeName {
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 4px 0;
+  font-size: 14px;
+}
+
+.badgeDetail {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.nextBadgeInfo {
+  padding: 16px;
+  background: var(--bg-page);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--primary);
+}
+
+.nextBadgeInfo p {
+  margin: 8px 0;
+}
+
+.nextBadgeInfo strong {
+  color: var(--primary);
+}
+
+/* ACTIONS */
+.actionsSection {
+  background: white;
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.actionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.actionBtn {
+  padding: 14px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  display: inline-block;
+}
+
+.actionBtn:hover:not(:disabled) {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.actionBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* HEALTH INFO */
+.healthSection {
+  background: white;
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.healthGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.healthCard {
+  background: var(--bg-page);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.healthCard h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.healthValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+.healthDetail {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+}
+
+/* HISTORY TABLE */
+.tableContainer {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead tr {
+  background: var(--primary-bg);
+  border-bottom: 2px solid var(--border);
+}
+
+.table th {
+  padding: 14px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.table tbody tr:hover {
+  background: var(--bg-page);
+}
+
+.table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.bloodTypeMini {
+  display: inline-block;
+  background: var(--primary-bg);
+  color: var(--primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statusBadge.completé {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.statusBadge.annulé {
+  background: #fee2e2;
+  color: var(--primary);
+}
+
+/* NO DATA */
+.noData {
+  text-align: center;
+  padding: 60px 32px;
+  background: white;
+  border-radius: var(--radius);
+  border: 2px dashed var(--border);
+}
+
+.noData p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.ctaLink {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.ctaLink:hover {
+  background: var(--primary-light);
+}
+
+/* DONATION STATS */
+.donationStatsSection {
+  background: white;
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.donationStatsSection h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 20px 0;
+}
+
+.donationStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.donatioStatCard {
+  background: var(--bg-page);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.statName {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.statNum {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* PROFILE CARD */
+.profileCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.profileHeader {
+  background: linear-gradient(135deg, #fee2e2 0%, #fef2f2 100%);
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profileAvatar {
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.profileInfo h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+.profileInfo p {
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+}
+
+.profileContent {
+  padding: 32px;
+}
+
+.profileGroup {
+  margin-bottom: 32px;
+}
+
+.profileGroup h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profileField {
+  margin-bottom: 16px;
+}
+
+.profileField label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.profileField p {
+  font-size: 15px;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.bloodTypeProfile {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+}
+
+.profileActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.btnEdit,
+.btnPassword {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnEdit {
+  background: var(--primary);
+  color: white;
+}
+
+.btnEdit:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.btnPassword {
+  background: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btnPassword:hover {
+  background: var(--primary-bg);
+}
+
+/* MODAL */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  max-width: 500px;
+  width: 90%;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalHeader {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.modalClose {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.modalContent {
+  padding: 24px;
+  text-align: center;
+}
+
+.modalContent p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.modalBtn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.modalBtn:hover {
+  background: var(--primary-light);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .headerContent {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .badgesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 24px 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .tabs {
+    padding: 0 16px;
+    overflow-x: auto;
+  }
+
+  .tab {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 20px 16px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+    margin: 24px 0 16px 0;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statCard {
+    gap: 12px;
+  }
+
+  .badgesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .actionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .healthGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px 8px;
+  }
+
+  .donationStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profileActions {
+    flex-direction: column;
+  }
+
+  .modal {
+    width: 95%;
+  }
+}

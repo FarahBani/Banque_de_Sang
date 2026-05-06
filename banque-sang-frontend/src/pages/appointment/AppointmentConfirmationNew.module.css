@@ -1,0 +1,332 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg-page, #f9fafb);
+}
+
+/* SUCCESS HEADER */
+.successHeader {
+  background: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%);
+  padding: 60px 32px;
+  text-align: center;
+  border-bottom: 2px solid #16a34a;
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.3);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #166534;
+  margin: 0 0 12px 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #15803d;
+  margin: 0;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 32px;
+}
+
+/* CONFIRMATION CARD */
+.confirmationCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cardHeader h2 {
+  font-size: 24px;
+  color: #dc2626;
+  margin: 0 0 8px 0;
+}
+
+.confirmationId {
+  font-size: 14px;
+  color: #6b7280;
+  font-family: 'Courier New', monospace;
+  background: #f3f4f6;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin: 0;
+}
+
+/* DETAILS GRID */
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.detailSection h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #dc2626;
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.label {
+  color: #6b7280;
+}
+
+.value {
+  color: #1f2937;
+  font-weight: 600;
+  text-align: right;
+}
+
+.bloodType {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #dc2626;
+  color: white;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 24px 0;
+}
+
+/* IMPORTANT SECTION */
+.importantSection,
+.whatToExpectSection,
+.cancellationSection {
+  margin-bottom: 24px;
+}
+
+.importantSection h3,
+.whatToExpectSection h3,
+.cancellationSection h3 {
+  font-size: 16px;
+  color: #dc2626;
+  margin: 0 0 12px 0;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.infoItem p {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.checkmark {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* WHAT TO EXPECT */
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.step h4 {
+  margin: 8px 0 4px;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.step p {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.stepNumber {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #dc2626;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 8px;
+}
+
+.arrow {
+  font-size: 20px;
+  color: #9ca3af;
+}
+
+/* CANCELLATION */
+.cancellationSection p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cancellationSection strong {
+  color: #dc2626;
+}
+
+/* ACTIONS */
+.actionsContainer {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnDashboard,
+.btnPrint,
+.btnHome {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btnDashboard {
+  background: #dc2626;
+  color: white;
+  border-color: #dc2626;
+}
+
+.btnDashboard:hover {
+  background: #b91c1c;
+}
+
+.btnPrint {
+  background: white;
+  color: #1f2937;
+}
+
+.btnPrint:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.btnHome {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.btnHome:hover {
+  background: #e5e7eb;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .successHeader {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 24px 16px;
+  }
+
+  .confirmationCard {
+    padding: 20px;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    flex-direction: column;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  .actionsContainer {
+    flex-direction: column;
+  }
+
+  .btnDashboard,
+  .btnPrint,
+  .btnHome {
+    width: 100%;
+    text-align: center;
+  }
+}

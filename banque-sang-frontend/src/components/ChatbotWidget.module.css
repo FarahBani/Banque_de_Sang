@@ -1,0 +1,234 @@
+/* BOUTON FLOTTANT */
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #9b2c2c9a;  /* Changé: rouge foncé avec transparence */
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(155, 44, 44, 0.4);  /* Changé: ombre bordeaux */
+  transition: transform 0.2s;
+  z-index: 9998;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+}
+
+/* FENÊTRE CHAT */
+.chatWindow {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 380px;
+  max-width: calc(100vw - 48px);
+  height: 560px;
+  max-height: calc(100vh - 130px);
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #9b2c2c 0%, #7f1d1d 100%);  /* Changé: dégradé bordeaux */
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.statusOnline {
+  margin: 4px 0 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.closeBtn {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* MESSAGES */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+
+.messageUser {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.messageBot {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.messageBubble {
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.messageUser .messageBubble {
+  background: #9b2c2c;  /* Changé: bordeaux */
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.messageBot .messageBubble {
+  background: white;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  border-bottom-left-radius: 4px;
+}
+
+.timestamp {
+  font-size: 10px;
+  color: #9ca3af;
+  margin-top: 4px;
+  padding: 0 6px;
+}
+
+.typingIndicator {
+  display: inline-block;
+  letter-spacing: 4px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* SUGGESTIONS */
+.suggestions {
+  padding: 8px 12px;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.suggestionBtn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.15s;
+}
+
+.suggestionBtn:hover {
+  border-color: #9b2c2c;  /* Changé: bordeaux */
+  color: #9b2c2c;  /* Changé: bordeaux */
+  background: #fef2f2;
+}
+
+/* INPUT */
+.inputForm {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+}
+
+.input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #9b2c2c;  /* Changé: bordeaux */
+}
+
+.input:disabled {
+  background: #f3f4f6;
+}
+
+.sendBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #9b2c2c;  /* Changé: bordeaux */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendBtn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .chatWindow {
+    bottom: 90px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    height: 70vh;
+  }
+}

@@ -1,0 +1,82 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.header { display: flex; align-items: flex-start; justify-content: space-between; }
+.title { font-size: 24px; font-weight: 700; color: var(--text-primary); }
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+.btnAdd {
+  background: var(--primary); color: white;
+  padding: 10px 20px; border-radius: var(--radius-sm);
+  font-size: 13.5px; font-weight: 600; transition: background 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.btnAdd:hover { background: var(--primary-light); }
+
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.searchWrap {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 8px 12px; flex: 1; max-width: 380px;
+}
+.search { border: none; outline: none; font-size: 13px; color: var(--text-primary); background: transparent; width: 100%; }
+
+.filterGroup { display: flex; gap: 6px; }
+.filterBtn {
+  padding: 7px 14px; border-radius: 100px; font-size: 12.5px; font-weight: 500;
+  background: var(--bg-white); border: 1px solid var(--border);
+  color: var(--text-secondary); cursor: pointer; transition: all 0.15s;
+}
+.filterBtn:hover { border-color: var(--primary); color: var(--primary); }
+.filterActive { background: var(--primary) !important; color: white !important; border-color: var(--primary) !important; }
+
+.tableCard {
+  background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm);
+}
+.table { width: 100%; border-collapse: collapse; }
+.table thead tr { background: #fafafa; border-bottom: 1px solid var(--border); }
+.table th {
+  padding: 12px 16px; font-size: 11px; font-weight: 600;
+  color: var(--text-secondary); text-align: left;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.table td { padding: 12px 16px; font-size: 13.5px; border-bottom: 1px solid var(--border); }
+.table tbody tr:last-child td { border-bottom: none; }
+.table tbody tr:hover { background: #fafafa; }
+
+.donneurCell { display: flex; align-items: center; gap: 12px; }
+.avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #fff0f0; color: var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; flex-shrink: 0;
+}
+.donneurName { font-weight: 600; font-size: 13.5px; }
+.donneurEmail { font-size: 12px; color: var(--text-muted); }
+
+.bloodBadge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 38px; height: 38px; padding: 0 8px;
+  background: #fff0f0; color: var(--primary);
+  font-weight: 700; font-size: 12px; border-radius: 50%;
+}
+
+.phone { color: var(--text-secondary); font-size: 13px; }
+.date { color: var(--text-muted); font-size: 13px; }
+.totalDons { font-weight: 600; color: var(--primary); }
+
+.tagGreen { display: inline-block; padding: 4px 10px; border-radius: 100px; font-size: 11.5px; font-weight: 600; background: var(--success-bg); color: var(--success); }
+.tagGray  { display: inline-block; padding: 4px 10px; border-radius: 100px; font-size: 11.5px; font-weight: 600; background: #f3f4f6; color: #6b7280; }
+
+.actions { display: flex; gap: 6px; }
+.btnView {
+  padding: 5px 12px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 500;
+  background: var(--bg-page); color: var(--text-primary);
+  border: 1px solid var(--border); cursor: pointer; transition: all 0.15s;
+}
+.btnView:hover { border-color: var(--info); color: var(--info); }
+.btnEdit {
+  padding: 5px 12px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 500;
+  background: #eff6ff; color: var(--info);
+  border: 1px solid transparent; cursor: pointer; transition: all 0.15s;
+}
+.btnEdit:hover { background: #dbeafe; }

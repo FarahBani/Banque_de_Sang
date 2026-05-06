@@ -1,0 +1,414 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg-page);
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #fee2e2 0%, #fef2f2 100%);
+  padding: 60px 32px;
+  text-align: center;
+  border-bottom: 2px solid var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 32px;
+}
+
+/* PROGRESS BAR */
+.progressContainer {
+  margin-bottom: 40px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.progressSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.progressStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-secondary);
+  transition: all 0.3s;
+}
+
+.progressStep.completed .stepCircle {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+.progressStep.active .stepCircle {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 0 0 8px rgba(220, 38, 38, 0.1);
+}
+
+.stepLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.progressStep.active .stepLabel {
+  color: var(--primary);
+}
+
+.progressStep.completed .stepLabel {
+  color: var(--success);
+}
+
+/* FORM */
+.form {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.formStep {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stepTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* FORM GROUPS */
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.formGroup input.inputError,
+.formGroup select.inputError,
+.formGroup textarea.inputError {
+  border-color: #dc2626;
+  background: #fee2e2;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error {
+  display: block;
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.hint {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* FORM ROW */
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* QUESTION GROUP */
+.questionGroup {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--bg-page);
+  border-radius: var(--radius-sm);
+}
+
+.questionGroup label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 24px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.radioLabel input[type='radio'] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* REVIEW SECTION */
+.reviewSection {
+  padding: 20px;
+  background: var(--primary-bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--primary);
+  margin-bottom: 24px;
+}
+
+.reviewSection h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 16px 0;
+}
+
+.reviewGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.reviewItem {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+}
+
+.reviewItem strong {
+  color: var(--primary);
+}
+
+/* SUBMIT ERROR */
+.submitError {
+  padding: 12px 16px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* BUTTONS */
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.btnPrevious,
+.btnNext,
+.btnSubmit {
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnPrevious {
+  background: white;
+  color: var(--text-secondary);
+  border: 2px solid var(--border);
+}
+
+.btnPrevious:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btnPrevious:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnNext {
+  background: var(--primary);
+  color: white;
+}
+
+.btnNext:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.btnSubmit {
+  background: var(--success);
+  color: white;
+}
+
+.btnSubmit:hover:not(:disabled) {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+.btnSubmit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 20px 16px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .stepTitle {
+    font-size: 20px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .radioGroup {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .reviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .progressSteps {
+    gap: 8px;
+  }
+
+  .stepCircle {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .stepLabel {
+    font-size: 11px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .btnPrevious,
+  .btnNext,
+  .btnSubmit {
+    width: 100%;
+  }
+}

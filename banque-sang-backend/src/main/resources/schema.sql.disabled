@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS hopitaux (
+    id BIGSERIAL PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    adresse VARCHAR(255),
+    telephone VARCHAR(255),
+    email VARCHAR(255),
+    convention_active BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE IF NOT EXISTS centres_don (
+    id BIGSERIAL PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    adresse VARCHAR(255) NOT NULL,
+    latitude DOUBLE PRECISION,
+    longitude DOUBLE PRECISION,
+    telephone VARCHAR(255),
+    horaires VARCHAR(255),
+    actif BOOLEAN DEFAULT TRUE
+);
